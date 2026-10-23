@@ -1,0 +1,37 @@
+# GLOBAL SETTINGS
+palette = "navy"
+add_newline = true
+
+format = """
+[╭─](bold navy)$directory$git_branch$git_status
+[╰─](bold navy)$character"""
+
+# COLORS
+[palettes.navy]
+navy = "#000014"
+blue = "#AFC2FF"
+lavender = "#CDD6F4"
+mint = "#CDF4DB"
+muted = "#565675"
+
+# DIRECTORY
+[directory]
+style = "bold lavender"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# GIT BRANCH
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "bold blue"
+
+# GIT STATUS
+[git_status]
+style = "bold mint"
+
+# COMMAND INDICATOR
+[character]
+success_symbol = "[❯](bold mint)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold blue)"
