@@ -82,7 +82,10 @@ window#waybar {
     border-radius: 10px;
     margin-right: 15px;
 }
-
+#custom-wallpaper, #custom-settings{
+    margin-left: 15px;
+    margin-right: 15px;
+}
 /* HOVER */
 #cpu:hover , #memory:hover , #clock:hover , #tray:hover , #network:hover , #battery:hover , #pulseaudio:hover, #backlight:hover, #bluetooth:hover , #custom-media_player:hover{
     border: 5px solid #00004b;
