@@ -3,10 +3,20 @@
     "position": "top",
     "zheight": 36,
 
+    "custom/media_player": {
+        "exec": "playerctl metadata --format '{{artist}} - {{title}}'",
+        "interval": 2,
+        "format": "󰎆 {}",
+        "max-length": 40,
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+
     "modules-left": [
         "cpu",
         "memory",
-        "cava"
+        "custom/media_player"
     ],
 
     "modules-center": [
