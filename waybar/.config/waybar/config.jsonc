@@ -12,15 +12,28 @@
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous"
     },
+    "custom/wallpaper":{
+        "on-click": "kitty -e waypaper",
+        "format": "󰸉"},
 
+    "custom/settings": {
+        "on-click":"kitty -e noctalia msg settings-open",
+        "format": ""
+    },
+    "custom/sillycat": {
+        "on-click": "xdg-open https://github.com/AndPan3",
+        "format": "󰄛"
+    },
     "modules-left": [
+        "custom/wallpaper",
         "cpu",
         "memory",
         "custom/media_player"
     ],
 
     "modules-center": [
-        "clock"
+        "clock",
+        "custom/sillycat"
     ],
 
     "modules-right": [
@@ -29,7 +42,8 @@
         "network",
         "battery",
         "bluetooth",
-        "pulseaudio"
+        "pulseaudio",
+        "custom/settings"
     ],
 
     // MODULE CONFIGURATIONS
@@ -64,8 +78,8 @@
 
     "battery": {
         "format": "{icon}: {capacity}%",
-        "format-charging": "{󰂄} {capacity}%",
-        "format-full": "{󰁹} {capacity}%",
+        "format-charging": "{icon}: {capacity}%",
+        "format-full": "{icon}: {capacity}%",
         "format-icons": [
             "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
         ]
