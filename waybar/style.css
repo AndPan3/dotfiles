@@ -1,0 +1,93 @@
+#network,
+#bluetooth,
+#battery,
+#backlight,
+#pulseaudio,
+#tray {
+    font-family: "JetBrainsMono Nerd Font";
+}
+window#waybar {
+    background: #000014;
+}
+#cpu , #memory{
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 5px solid #000025;
+    padding: 5px;
+    border-radius: 10px;
+}
+#clock {
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 5px solid #000033;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;    
+}
+#tray{
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 5px solid #000025;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+#network{
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 5px solid #000025;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+#battery{
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 5px solid #000025;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+#pulseaudio{
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 5px solid #000025;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+#backlight{
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 5px solid #000025;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+#bluetooth{
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 5px solid #000025;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+#custom-media_player{
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 5px solid #000025;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+#custom-wallpaper, #custom-settings{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+/* HOVER */
+#cpu:hover , #memory:hover , #clock:hover , #tray:hover , #network:hover , #battery:hover , #pulseaudio:hover, #backlight:hover, #bluetooth:hover , #custom-media_player:hover{
+    border: 5px solid #00004b;
+    background: #000025;
+}

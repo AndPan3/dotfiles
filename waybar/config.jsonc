@@ -1,0 +1,104 @@
+{
+    "layer": "top",
+    "position": "top",
+    "zheight": 36,
+
+    "custom/media_player": {
+        "exec": "playerctl metadata --format '{{artist}} - {{title}}'",
+        "interval": 2,
+        "format": "󰎆 {}",
+        "max-length": 40,
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+    "custom/wallpaper":{
+        "on-click": "kitty -e waypaper",
+        "format": "󰸉"},
+
+    "custom/settings": {
+        "on-click":"kitty -e noctalia msg settings-open",
+        "format": ""
+    },
+    "custom/sillycat": {
+        "on-click": "xdg-open https://github.com/AndPan3",
+        "format": "󰄛"
+    },
+    "modules-left": [
+        "custom/wallpaper",
+        "cpu",
+        "memory",
+        "custom/media_player"
+    ],
+
+    "modules-center": [
+        "clock",
+        "custom/sillycat"
+    ],
+
+    "modules-right": [
+        "tray",
+        "backlight",
+        "network",
+        "battery",
+        "bluetooth",
+        "pulseaudio",
+        "custom/settings"
+    ],
+
+    // MODULE CONFIGURATIONS
+
+    "cpu": {
+        "format": ": {usage}%",
+        "interval": 1,
+        "on-click": "kitty -e btop"
+    },
+
+    "memory": {
+        "format": ": {percentage}%",
+        "interval": 1,
+        "on-click": "kitty -e btop"
+    },
+
+    "clock": {
+        "on-click": "kitty -e ~/.cargo/bin/tclock"
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "network": {
+        "format": "󰤨{essid}",
+        "format-disconnected": "󰤫",
+        "format-disabled": "󰤮",
+        "interval": 2,
+        "on-click": "kitty -e nmtui"
+    },
+
+    "battery": {
+        "format": "{icon}: {capacity}%",
+        "format-charging": "{icon}: {capacity}%",
+        "format-full": "{icon}: {capacity}%",
+        "format-icons": [
+            "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+        ]
+    },
+    "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": "󰝟",
+    "on-click": "pavucontrol",
+    "interval": 0.2
+},
+    "backlight": {
+        "format": ": {percent}%",
+        "format-disabled": ": Disabled",
+        "interval": 0.3,
+        "on-click": "kitty -e lumiere"
+    },
+    "bluetooth": {
+        "format": ": {status}",
+        "interval": 2,
+        "on-click": "kitty -e blueman-manager"
+    }
+}
