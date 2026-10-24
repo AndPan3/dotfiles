@@ -1,0 +1,65 @@
+{
+    "layer": "top",
+    "position": "top",
+    "zheight": 36,
+
+    "modules-left": [
+        "cpu",
+        "memory"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "tray",
+        "backlight",
+        "network",
+        "battery",
+        "pulseaudio"
+    ],
+
+    // MODULE CONFIGURATIONS
+
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "MEM: {percentage}%",
+        "interval": 2
+    },
+
+    "clock": {
+        "on-click": "kitty -e ~/.cargo/bin/tclock"
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "network": {
+        "format": "{essid}",
+        "format-disconnected": "Disconnected",
+        "format-disabled": "Disabled",
+        "interval": 2,
+        "on-click": "kitty -e nmtui"
+    },
+
+    "battery": {
+    },
+    "pulseaudio": {
+    "format": "VOL {volume}%",
+    "format-muted": "VOL Muted :(",
+    "on-click": "pavucontrol",
+    "interval": 0.2
+},
+    "backlight": {
+        "format": "Light: {percent}%",
+        "format-disabled": "Disabled",
+        "interval": 0.3,
+        "on-click": "kitty -e lumiere"
+    }
+}
