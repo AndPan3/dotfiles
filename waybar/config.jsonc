@@ -17,19 +17,20 @@
         "backlight",
         "network",
         "battery",
+        "bluetooth",
         "pulseaudio"
     ],
 
     // MODULE CONFIGURATIONS
 
     "cpu": {
-        "format": "CPU: {usage}%",
-        "interval": 2
+        "format": ": {usage}%",
+        "interval": 1
     },
 
     "memory": {
-        "format": "MEM: {percentage}%",
-        "interval": 2
+        "format": ": {percentage}%",
+        "interval": 1
     },
 
     "clock": {
@@ -41,25 +42,36 @@
     },
 
     "network": {
-        "format": "{essid}",
-        "format-disconnected": "Disconnected",
-        "format-disabled": "Disabled",
+        "format": "󰤨{essid}",
+        "format-disconnected": "󰤫",
+        "format-disabled": "󰤮",
         "interval": 2,
         "on-click": "kitty -e nmtui"
     },
 
     "battery": {
+        "format": "{icon}: {capacity}%",
+        "format-charging": "{󰂄} {capacity}%",
+        "format-full": "{󰁹} {capacity}%",
+        "format-icons": [
+            "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+        ]
     },
     "pulseaudio": {
-    "format": "VOL {volume}%",
-    "format-muted": "VOL Muted :(",
+    "format": " {volume}%",
+    "format-muted": "󰝟",
     "on-click": "pavucontrol",
     "interval": 0.2
 },
     "backlight": {
-        "format": "Light: {percent}%",
-        "format-disabled": "Disabled",
+        "format": ": {percent}%",
+        "format-disabled": ": Disabled",
         "interval": 0.3,
         "on-click": "kitty -e lumiere"
+    },
+    "bluetooth": {
+        "format": ": {status}",
+        "interval": 2,
+        "on-click": "kitty -e blueman-manager"
     }
 }
