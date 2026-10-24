@@ -5,7 +5,8 @@
 
     "modules-left": [
         "cpu",
-        "memory"
+        "memory",
+        "cava"
     ],
 
     "modules-center": [
@@ -25,12 +26,14 @@
 
     "cpu": {
         "format": ": {usage}%",
-        "interval": 1
+        "interval": 1,
+        "on-click": "kitty -e btop"
     },
 
     "memory": {
         "format": ": {percentage}%",
-        "interval": 1
+        "interval": 1,
+        "on-click": "kitty -e btop"
     },
 
     "clock": {
