@@ -1,36 +1,3 @@
-[bar.default]
-capsule = true
-enabled = false
-end = [
-    "group:musicbar",
-    "tray",
-    "notifications",
-    "clipboard",
-    "network",
-    "bluetooth",
-    "volume",
-    "brightness",
-    "battery",
-    "control-center",
-    "session"
-]
-font_weight = 700
-padding = 76
-scale = 1.3999999999999999
-thickness = 45
-widget_spacing = 10
-
-    [[bar.default.capsule_group]]
-    border = "outline"
-    enabled = true
-    fill = "surface_variant"
-    foreground = "on_surface"
-    id = "musicbar"
-    members = [ "music-media", "music-vis", "music-controls" ]
-    opacity = 0.68000000000000005
-    padding = 4.0
-    radius = 10.0
-    widget_spacing = 2.0
 
 [desktop_widgets]
 schema_version = 2
@@ -66,21 +33,6 @@ behavior_order = [ "lock", "screen-off", "lock-and-suspend", "idle-behavior" ]
     action = "lock_and_suspend"
     enabled = true
     timeout = 1000.0
-
-    [idle.behavior.lock]
-    action = "lock"
-    enabled = false
-    timeout = 600.0
-
-    [idle.behavior.lock-and-suspend]
-    action = "lock_and_suspend"
-    enabled = false
-    timeout = 900.0
-
-    [idle.behavior.screen-off]
-    action = "screen_off"
-    enabled = false
-    timeout = 660.0
 
 [location]
 address = "Zofingen"
@@ -144,10 +96,6 @@ widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-login-box@eDP-1" ]
         show_session_buttons = true
         show_unlock_hint = true
         show_weather = true
-
-[plugins]
-enabled = [ "andrej/musicbar" ]
-
 [shell]
 settings_show_advanced = false
 
@@ -178,47 +126,3 @@ path = "/home/andrej/Pictures/Wallpapers/00dbffb7-9b11-4671-a960-adc6f20a2fa9-38
 
 [weather]
 refresh_minutes = 5
-
-[widget.music-controls]
-capsule = false
-type = "andrej/musicbar:controls"
-
-    [widget.music-controls.actions]
-    right = "panel-toggle control-center media"
-    scroll_down = "volume-down"
-    scroll_up = "volume-up"
-
-[widget.music-media]
-art_size = 24
-capsule = false
-hide_artist = true
-hide_when_no_media = true
-max_length = 190
-min_length = 90
-title_scroll = "always"
-type = "media"
-
-    [widget.music-media.actions]
-    back = "media previous"
-    forward = "media next"
-    left = "panel-toggle control-center media"
-    right = "panel-toggle control-center media"
-    scroll_down = "volume-down"
-    scroll_up = "volume-up"
-
-[widget.music-vis]
-bands = 10
-capsule = false
-centered = true
-color_1 = "primary"
-color_2 = "secondary"
-mirrored = false
-show_when_idle = false
-type = "audio_visualizer"
-width = 54
-
-    [widget.music-vis.actions]
-    left = "panel-toggle control-center media"
-    right = "media toggle"
-    scroll_down = "volume-down"
-    scroll_up = "volume-up"
